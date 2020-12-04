@@ -1,0 +1,564 @@
+-----  Stop and Wait Network Simulator Version 1.1 -------- 
+
+Enter the number of packets to simulate: Do you want to show crc steps? (Yes = 1, No = 0): Do you want to enable piggybacking? (Yes = 1, No = 0): Enter generator polynomial (just type the divisor in binary): Enter frame loss probability [enter 0.0 for no loss]:Enter frame corruption probability [0.0 for no corruption]:Enter average time between packets from sender's layer3 [ > 0.0]:Enter TRACE:
+EVENT time: 9.356975,  type: 1, fromlayer3  entity: 1
+B_output(): ENTERING.
+B_output(): Calculating CRC code and copying packet to payload.
+B_output(): Calculated CRC code and copied packet to payload.
+B_output(): Starting timer.
+B_output(): Started timer.
+B_output(): CRC Payload = 1110010
+B_output(): Transmitting frame.
+          TOlayer1: frame being corrupted
+B_output(): Transmitted frame.
+B_output(): EXITING.
+
+EVENT time: 13.447523,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 24.356976,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 133.732101,  type: 1, fromlayer3  entity: 0
+A_output(): ENTERING.
+A_output(): Calculating CRC code and copying packet to payload.
+A_output(): Calculated CRC code and copied packet to payload.
+A_output(): Starting timer.
+A_output(): Started timer.
+A_output(): CRC Payload = 0000000
+A_output(): Transmitting frame.
+A_output(): Transmitted frame.
+A_output(): EXITING.
+
+EVENT time: 135.133392,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 0000000
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 148.732101,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 0000000
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 154.168793,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 0000000
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+          TOlayer1: frame being corrupted
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 162.408447,  type: 2, fromlayer1  entity: 0
+A_input(): ENTERING.
+A_input(): Checking validity of CRC code.
+A_input(): CRC code is invalid.
+A_input(): CRC Payload = 1000000
+A_inpit(): Ignoring frame.
+A_input(): EXITING.
+
+EVENT time: 163.732101,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 0000000
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 170.467682,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 1000000
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 178.732101,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 0000000
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 187.495010,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 0000000
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 193.732101,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 0000000
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 197.218384,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 0000000
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 201.094696,  type: 2, fromlayer1  entity: 0
+A_input(): ENTERING.
+A_input(): Checking validity of CRC code.
+A_input(): CRC code is valid.
+A_input(): Discovered Ack frame.
+A_input(): Stopping timer.
+A_input(): Stopped timer.
+A_input(): EXITING.
+
+EVENT time: 226.496170,  type: 1, fromlayer3  entity: 0
+A_output(): ENTERING.
+A_output(): Calculating CRC code and copying packet to payload.
+A_output(): Calculated CRC code and copied packet to payload.
+A_output(): Starting timer.
+A_output(): Started timer.
+A_output(): CRC Payload = 1110010
+A_output(): Transmitting frame.
+A_output(): Transmitted frame.
+A_output(): EXITING.
+
+EVENT time: 227.553574,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 241.496170,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 250.831207,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+          TOlayer1: frame being lost
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 256.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 257.500824,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 271.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 274.874481,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 286.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 295.474945,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 301.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 309.650665,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 316.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 321.773529,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+          TOlayer1: frame being lost
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 323.618286,  type: 1, fromlayer3  entity: 1
+B_output(): ENTERING.
+B_output(): Can not send frame for 0
+B_output(): Awaiting acknowledgement for 1
+B_output(): Dropped payload = ddd
+B_output(): EXITING.
+
+EVENT time: 331.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 339.521301,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 346.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 351.234924,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 361.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 369.207916,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 376.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 385.916595,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 391.496155,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 1 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 394.560577,  type: 2, fromlayer1  entity: 0
+A_input(): ENTERING.
+A_input(): Checking validity of CRC code.
+A_input(): CRC code is valid.
+A_input(): Discovered Ack frame.
+A_input(): Stopping timer.
+A_input(): Stopped timer.
+A_input(): EXITING.
+
+EVENT time: 396.467010,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 482.265717,  type: 1, fromlayer3  entity: 0
+A_output(): ENTERING.
+A_output(): Calculating CRC code and copying packet to payload.
+A_output(): Calculated CRC code and copied packet to payload.
+A_output(): Starting timer.
+A_output(): Started timer.
+A_output(): CRC Payload = 1110010
+A_output(): Transmitting frame.
+          TOlayer1: frame being corrupted
+A_output(): Transmitted frame.
+A_output(): EXITING.
+
+EVENT time: 491.789459,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 497.265717,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being lost
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 512.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being lost
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 527.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being lost
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 542.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 543.426453,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 557.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 561.462036,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 572.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being lost
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 587.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being lost
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 602.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 603.809326,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+          TOlayer1: frame being lost
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 617.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 623.183655,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Flagged outstanding Ack.
+B_input(): EXITING.
+
+EVENT time: 632.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+          TOlayer1: frame being corrupted
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 639.660522,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is invalid.
+B_input(): CRC Payload = 0110010
+B_input(): Ignoring frame.
+B_input(): EXITING.
+
+EVENT time: 647.265747,  type: 0, timerinterrupt   entity: 0
+A_timerinterrupt(): ENTERING.
+A_timerinterrupt(): Have not received acknowledgement for 0 yet.
+A_timerinterrupt(): Retransmitting packet.
+A_timerinterrupt(): CRC Payload = 1110010
+A_timerinterrupt(): Retransmitted packet.
+A_timerinterrupt(): EXITING.
+
+EVENT time: 649.130676,  type: 2, fromlayer1  entity: 1
+B_input(): ENTERING.
+B_input(): Checking validity of CRC code.
+B_input(): CRC code is valid.
+B_input(): Discovered Data frame.
+B_input(): CRC Payload = 1110010
+B_input(): Data frame sequence and outstanding ack sequence same.
+B_input(): Transmitting Ack.
+B_input(): Calculating CRC code.
+B_input(): Calculated CRC code.
+B_input(): Transmitted Ack.
+B_input(): EXITING.
+
+EVENT time: 657.337646,  type: 2, fromlayer1  entity: 0
+A_input(): ENTERING.
+A_input(): Checking validity of CRC code.
+A_input(): CRC code is valid.
+A_input(): Discovered Ack frame.
+A_input(): Stopping timer.
+A_input(): Stopped timer.
+A_input(): EXITING.
+ Simulator terminated at time 657.337646
+ after sending 5 pkts from layer3
